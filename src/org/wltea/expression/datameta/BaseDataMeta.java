@@ -73,7 +73,7 @@ public abstract class BaseDataMeta {
 	/**
 	 * 
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public String getDataValueText() {
 		if(dataValue == null){
 			return null;

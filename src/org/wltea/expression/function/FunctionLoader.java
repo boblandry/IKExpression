@@ -54,6 +54,7 @@ public class FunctionLoader {
 	 * @throws ParserConfigurationException 
 	 * @throws Exception 
 	 */
+	@SuppressWarnings("rawtypes")
 	private void init() throws Exception {
 			DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance(); 
 			DocumentBuilder builder=factory.newDocumentBuilder();
@@ -157,6 +158,7 @@ public class FunctionLoader {
 	 * @param parameters
 	 * @return
 	 */
+	@SuppressWarnings("rawtypes")
 	private Class[] getParameterTypes(List<Parameter> parameters) {
 		if (parameters == null) {
 			return null;
@@ -190,9 +192,11 @@ public class FunctionLoader {
 	 * @version Feb 18, 2009
 	 */
 	private class Parameter {
+		@SuppressWarnings("rawtypes")
 		Class type;//参数类型
 		Object value;//参数值
 		
+		@SuppressWarnings("rawtypes")
 		public Parameter(String _type, String _value) {
 			try {
 				type = getTypeClass(_type);
@@ -213,6 +217,7 @@ public class FunctionLoader {
 			
 		}
 		
+		@SuppressWarnings("rawtypes")
 		private Class getTypeClass(String _type) throws ClassNotFoundException {
 			if ("boolean".equals(_type)) {
 				return boolean.class;

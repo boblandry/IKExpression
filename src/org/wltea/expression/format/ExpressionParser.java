@@ -87,6 +87,8 @@ private static Map<String, Operator> operators = new HashMap<String, Operator>()
 		} catch (ParseException e) {
 			e.printStackTrace();
 			throw new FormatException("表达式词元格式异常");
+		} finally {
+			eReader.close();
 		}
 		if(!parenthesis.isEmpty()) {
 			throw new FormatException("括号匹配出错");

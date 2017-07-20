@@ -18,6 +18,7 @@ import junit.framework.TestCase;
  * @author 林良益
  *
  */
+@SuppressWarnings("deprecation")
 public class FunctionalityTest extends TestCase {
 	
 	/**
@@ -168,6 +169,7 @@ public class FunctionalityTest extends TestCase {
 	}
 	
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args){
 		System.out.println(100>10 ? 11111L:3.3f );
 	}

@@ -32,7 +32,6 @@ public class FunctionExecution {
 	 * @return
 	 * @throws IllegalExpressionException 
 	 */
-	@SuppressWarnings("unchecked")
 	public static Constant execute(String functionName , int position , Constant[] args) throws IllegalExpressionException{
 		if(functionName == null){
 			throw new IllegalArgumentException("函数名为空");
